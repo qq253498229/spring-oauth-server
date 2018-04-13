@@ -1,5 +1,6 @@
 package com.example.oauthtest.config;
 
+import com.example.oauthtest.user.UserServiceImpl;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
@@ -23,6 +24,9 @@ import javax.annotation.Resource;
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
 
   @Resource
+  private UserServiceImpl userService;
+
+  @Resource
   private AuthenticationManager authenticationManager;
 
   @Override
@@ -37,7 +41,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
   @Override
   public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
-    endpoints.authenticationManager(authenticationManager);
+    //这里的userDetailsService是为了refresh_token
+    endpoints.authenticationManager(authenticationManager).userDetailsService(userService);
   }
 
 }

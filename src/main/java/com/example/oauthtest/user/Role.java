@@ -7,6 +7,8 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 /**
+ * 角色实体
+ *
  * @author wangbin
  */
 @Entity

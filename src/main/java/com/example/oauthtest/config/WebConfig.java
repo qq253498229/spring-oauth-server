@@ -6,8 +6,9 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
+ * MVC配置
  * Package com.example.oauthtest.config
- * Module
+ * Module oauth-test
  * Project oauth-test
  * Email 253498229@qq.com
  * Created on 2018/4/14 上午3:26

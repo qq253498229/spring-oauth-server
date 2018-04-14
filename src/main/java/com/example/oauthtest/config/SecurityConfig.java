@@ -13,8 +13,9 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import javax.annotation.Resource;
 
 /**
+ * 安全配置
  * Package com.example.oauthtest.config
- * Module
+ * Module oauth-test
  * Project oauth-test
  * Email 253498229@qq.com
  * Created on 2018/4/13 下午8:58

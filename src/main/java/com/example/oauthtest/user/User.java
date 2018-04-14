@@ -17,6 +17,8 @@ import java.util.Collection;
 import java.util.List;
 
 /**
+ * 用户信息实体
+ *
  * @author wangbin
  */
 @Entity

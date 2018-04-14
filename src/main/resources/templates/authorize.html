@@ -18,7 +18,7 @@
 
   html {
     height: 100%;
-    background-image: radial-gradient(circle,#1280e1 0%,#002069 100%);
+    background-image: radial-gradient(circle, #1280e1 0%, #002069 100%);
   }
 
   body {
@@ -111,6 +111,16 @@
   </div>
 </form>
 <script>
+
+  window.onload = function () {
+    document.onkeydown = function (event) {
+      var e = event || window.event;
+      if (e && e.keyCode === 13) {
+        approval()
+      }
+    };
+  };
+
   function approval() {
     document.getElementById("result").value = true;
     document.getElementById("confirmationForm").submit()

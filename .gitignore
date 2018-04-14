@@ -27,3 +27,6 @@
 ### maven ###
 .mvn
 mvn*
+
+# docker
+docker/data

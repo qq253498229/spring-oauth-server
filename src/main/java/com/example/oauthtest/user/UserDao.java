@@ -1,7 +1,6 @@
 package com.example.oauthtest.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 /**
  * Package com.example.oauthtest.user
@@ -12,7 +11,6 @@ import org.springframework.stereotype.Repository;
  *
  * @author wangbin
  */
-@Repository
 public interface UserDao extends JpaRepository<User, String> {
   /**
    * 通过用户名获取用户实体

@@ -1,6 +1,7 @@
 package com.example.oauthtest.user;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -14,6 +15,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "t_role")
 @Data
+@NoArgsConstructor
 public class Role implements Serializable {
 
   @Id
@@ -24,4 +26,8 @@ public class Role implements Serializable {
 
   @Column(nullable = false, unique = true)
   private String name;
+
+  public Role(String name) {
+    this.name = name;
+  }
 }
